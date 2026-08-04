@@ -66,7 +66,7 @@ function MarketMockup() {
       <div>
         <div className="flex items-center justify-between mb-4">
           <span className="text-xs font-semibold uppercase tracking-wider text-[var(--accent-blue)]">메소 거래 신뢰 지표</span>
-          <span className="inline-flex items-center gap-1 text-[10px] rounded-full bg-emerald-500/10 px-2 py-0.5 text-emerald-400 font-medium">
+          <span className="inline-flex items-center gap-1 text-[10px] rounded-md bg-emerald-500/10 px-2 py-0.5 text-emerald-400 font-medium">
             <ShieldCheck className="h-3 w-3" /> 실시간 보증
           </span>
         </div>
@@ -74,7 +74,7 @@ function MarketMockup() {
 
         <div className="space-y-5">
           {/* 신뢰율 카드 */}
-          <div className="rounded-2xl bg-white/[0.02] border border-white/[0.05] p-4 flex items-center justify-between">
+          <div className="rounded-xl bg-white/[0.02] border border-white/[0.05] p-4 flex items-center justify-between">
             <div>
               <p className="text-[11px] font-semibold text-[var(--text-muted)]">거래 안전 신뢰율</p>
               <p className="text-[10px] text-emerald-400 mt-0.5">사기 사고율 0% 보장</p>
@@ -83,7 +83,7 @@ function MarketMockup() {
           </div>
 
           {/* 거래 상태 카드 */}
-          <div className="rounded-2xl bg-white/[0.02] border border-white/[0.05] p-4 flex items-center justify-between">
+          <div className="rounded-xl bg-white/[0.02] border border-white/[0.05] p-4 flex items-center justify-between">
             <div>
               <p className="text-[11px] font-semibold text-[var(--text-muted)]">실시간 거래 강도</p>
               <p className="text-[10px] text-[var(--text-secondary)] mt-0.5">최근 1시간 내 거래 성사</p>
@@ -129,7 +129,7 @@ function NamesMockup() {
       <div>
         <div className="flex items-center justify-between mb-4">
           <span className="text-xs font-semibold uppercase tracking-wider text-[var(--accent-ember)]">실시간 레어 닉네임 입찰</span>
-          <span className="flex items-center gap-1 text-[10px] rounded-full bg-[var(--accent-ember)]/10 px-2 py-0.5 text-[var(--accent-ember)] font-medium">
+          <span className="flex items-center gap-1 text-[10px] rounded-md bg-[var(--accent-ember)]/10 px-2 py-0.5 text-[var(--accent-ember)] font-medium">
             <Flame className="h-3 w-3" /> HOT 입찰중
           </span>
         </div>
@@ -186,12 +186,12 @@ function PartyMockup() {
       <div>
         <div className="flex items-center justify-between mb-4">
           <span className="text-xs font-semibold uppercase tracking-wider text-[var(--accent-violet-soft)]">파티 매칭</span>
-          <span className="inline-flex items-center gap-1 rounded-full bg-[var(--accent-violet)]/10 px-2 py-0.5 text-[10px] font-medium text-[var(--accent-violet-soft)]">
+          <span className="inline-flex items-center gap-1 rounded-md bg-[var(--accent-violet)]/10 px-2 py-0.5 text-[10px] font-medium text-[var(--accent-violet-soft)]">
             <Users className="h-3 w-3" /> {slotCount} / 4 구인중
           </span>
         </div>
 
-        <div className="rounded-2xl bg-white/[0.03] border border-white/[0.05] p-4">
+        <div className="rounded-xl bg-white/[0.03] border border-white/[0.05] p-4">
           <div className="flex items-center gap-3 mb-3">
             <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[var(--accent-violet)]/15 text-[var(--accent-violet-soft)]">
               <Flame className="h-5 w-5" />
@@ -315,7 +315,7 @@ export function FeatureSection() {
         </motion.div>
 
         {/* Unified Hub Card Component with ShaderGradient Backdrop */}
-        <div className="neo-raised relative overflow-hidden rounded-[2.5rem] border border-white/[0.06] p-8 md:p-12 shadow-[var(--shadow-raised)]">
+        <div className="neo-raised relative overflow-hidden rounded-3xl border border-white/[0.06] p-8 md:p-12 shadow-[var(--shadow-raised)]">
 
           {/* Animated 3D Fluid Gradient Background */}
           <ShaderGradientCanvas style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}>
@@ -333,12 +333,12 @@ export function FeatureSection() {
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    className="group relative flex w-full items-start gap-4 rounded-2xl p-4.5 text-left transition-all duration-300 hover:bg-white/[0.02] cursor-pointer"
+                    className="group relative flex w-full items-start gap-4 rounded-xl p-4.5 text-left transition-all duration-300 hover:bg-white/[0.02] cursor-pointer"
                   >
                     {isActive && (
                       <motion.div
                         layoutId="activeFeatureBg"
-                        className="absolute inset-0 rounded-2xl bg-white/[0.04] border border-white/[0.08]"
+                        className="absolute inset-0 rounded-xl bg-white/[0.04] border border-white/[0.08]"
                         transition={{ type: "spring", stiffness: 350, damping: 30 }}
                       />
                     )}
@@ -391,7 +391,7 @@ export function FeatureSection() {
               </div>
 
               {/* Dynamic Interactive Simulator / Mockup Box */}
-              <div className="glass rounded-[2rem] border border-white/[0.08] min-h-[300px] overflow-hidden bg-[var(--bg-surface)]/45">
+              <div className="glass rounded-2xl border border-white/[0.08] min-h-[300px] overflow-hidden bg-[var(--bg-surface)]/45">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeTab}

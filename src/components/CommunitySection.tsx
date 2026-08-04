@@ -69,10 +69,10 @@ function CommunityCard({ c, index }: { c: Community; index: number }) {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-      className="neo-raised spotlight-card group relative overflow-hidden rounded-[2rem] p-9 transition-shadow duration-300 hover:shadow-[0_50px_90px_-30px_rgba(124,111,240,0.35)] sm:p-10"
+      className="neo-raised spotlight-card group relative overflow-hidden rounded-3xl p-9 transition-shadow duration-300 hover:shadow-[0_50px_90px_-30px_rgba(124,111,240,0.35)] sm:p-10"
     >
       <div className="spotlight-card-glow" />
-      <div className="pointer-events-none absolute inset-0 opacity-15 overflow-hidden rounded-[2rem] -z-10">
+      <div className="pointer-events-none absolute inset-0 opacity-15 overflow-hidden rounded-3xl -z-10">
         <ShaderGradientCanvas style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}>
           <ShaderGradient
             animate="on"

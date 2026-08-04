@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import { DiscordButton } from "./DiscordButton";
 
 export function Navbar() {
@@ -32,14 +33,14 @@ export function Navbar() {
       >
         <div className="flex w-full items-center justify-between">
           <a href="#" className="flex items-center gap-2.5">
-            <span
-              className="flex h-8 w-8 items-center justify-center rounded-xl text-sm font-extrabold text-white"
-              style={{
-                background: "linear-gradient(135deg, #8b7dfb 0%, #4d9fff 100%)",
-              }}
-            >
-              M
-            </span>
+            <Image
+              src="/mapleland.webp"
+              alt="메이플 플래닛"
+              width={150}
+              height={121}
+              priority
+              className="h-9 w-auto"
+            />
             <span className="font-display text-sm font-bold tracking-tight text-[var(--text-primary)]">
               메이플 플래닛
             </span>

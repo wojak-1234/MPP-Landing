@@ -7,6 +7,8 @@ import { animate, stagger } from "animejs";
 import { HeroBackdrop } from "./HeroBackdrop";
 import { DiscordButton } from "./DiscordButton";
 import { useCountUp } from "./useCountUp";
+import { LiveOnlineCounter } from "./LiveOnlineCounter";
+import { belagak } from "@/lib/fonts";
 
 const DISCORD_INVITE = "https://discord.com/invite/mpplanet";
 
@@ -224,7 +226,7 @@ export function HeroSection() {
 
       {/* floating glass instrument cards — spatial UI signature */}
       <div className="pointer-events-none absolute inset-0 hidden md:block overflow-hidden perspective-1000 preserve-3d">
-        {statsData.map((stat, idx) => (
+        {statsData.map((stat) => (
           <StatFloatingCard
             key={stat.label}
             depth={stat.depth}
@@ -244,16 +246,14 @@ export function HeroSection() {
       </div>
 
       <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center px-6 text-center">
-        <div
-          ref={badgeRef}
-          style={{ opacity: 0 }}
-          className="glass mb-8 inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-medium text-[var(--text-secondary)]"
-        >
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--accent-blue)] opacity-75" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--accent-blue)]" />
+        <div ref={badgeRef} style={{ opacity: 0 }} className="mb-8 flex flex-col items-center">
+          <LiveOnlineCounter
+            memberCount={memberCount}
+            className={`${belagak.className} text-5xl leading-none tracking-tight text-gradient-accent sm:text-6xl`}
+          />
+          <span className="mt-2.5 text-xs font-semibold uppercase tracking-[0.25em] text-[var(--text-muted)]">
+            온라인
           </span>
-          <span>국내 최대 규모 · 약 {memberCount.toLocaleString()}명 활동 중</span>
         </div>
 
         <h1
