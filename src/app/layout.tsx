@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { scdream } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   title: "메이플 월드 커뮤니티 | 국내 최대 메이플 디스코드",
@@ -13,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko" className="h-full antialiased">
+    <html lang="ko" className={`h-full antialiased ${scdream.variable}`}>
       <body className="min-h-full flex flex-col bg-[#08090F] text-[#E7E8F2]">
         {children}
       </body>

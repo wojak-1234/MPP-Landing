@@ -35,7 +35,7 @@ export function DiscordButton({
         onClick={onClick}
         whileHover={{ y: -2 }}
         whileTap={{ scale: 0.97 }}
-        className={`group inline-flex items-center gap-2.5 rounded-full glass ${sizeCls} font-semibold text-[var(--text-primary)] transition-colors hover:border-[var(--accent-violet-soft)]/50 ${className}`}
+        className={`group inline-flex items-center gap-2.5 rounded-2xl glass ${sizeCls} font-semibold text-[var(--text-primary)] transition-colors hover:border-[var(--accent-violet-soft)]/50 ${className}`}
       >
         <DiscordMark className="h-5 w-5 text-[var(--accent-violet-soft)]" />
         {label}
@@ -52,7 +52,7 @@ export function DiscordButton({
         onClick={onClick}
         whileHover={{ y: -1 }}
         whileTap={{ scale: 0.96 }}
-        className="group relative z-10 inline-flex items-center gap-2.5 overflow-hidden rounded-full font-bold text-white bg-[#0e1017] shadow-[0_20px_45px_-15px_rgba(124,111,240,0.3)] transition-shadow hover:shadow-[0_25px_55px_-12px_rgba(124,111,240,0.5)]"
+        className="group relative z-10 inline-flex items-center gap-2.5 overflow-hidden rounded-2xl font-bold text-white bg-[#0e1017] shadow-[0_20px_45px_-15px_rgba(124,111,240,0.3)] transition-shadow hover:shadow-[0_25px_55px_-12px_rgba(124,111,240,0.5)]"
         style={{
           background: "linear-gradient(135deg, rgba(22, 25, 40, 0.95) 0%, rgba(14, 16, 27, 0.95) 100%)",
         }}

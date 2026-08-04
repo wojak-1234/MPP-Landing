@@ -31,10 +31,10 @@
   --shadow-inset: inset 0 1px 1px rgba(255, 255, 255, 0.06),
     inset 0 -8px 20px rgba(0, 0, 0, 0.35);
 
-  --font-display: "Plus Jakarta Sans", "Pretendard", "Apple SD Gothic Neo",
-    -apple-system, system-ui, sans-serif;
-  --font-body: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", -apple-system,
-    system-ui, "Segoe UI", sans-serif;
+  --font-display: var(--font-scdream), "Plus Jakarta Sans", "Pretendard",
+    "Apple SD Gothic Neo", -apple-system, system-ui, sans-serif;
+  --font-body: var(--font-scdream), "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR",
+    -apple-system, system-ui, "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", "SFMono-Regular", ui-monospace, Menlo, monospace;
 }
 
@@ -200,7 +200,7 @@ body {
 .shimmer-btn-wrapper {
   position: relative;
   padding: 1px;
-  border-radius: 9999px;
+  border-radius: 1rem;
   background: rgba(255, 255, 255, 0.05);
   overflow: hidden;
 }

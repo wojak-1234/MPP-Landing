@@ -40,7 +40,7 @@ export function CTASection() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           onMouseMove={handleMouseMove}
-          className="neo-raised spotlight-card group relative overflow-hidden rounded-[2.5rem] px-8 py-16 text-center sm:px-16 sm:py-20"
+          className="neo-raised spotlight-card group relative overflow-hidden rounded-3xl px-8 py-16 text-center sm:px-16 sm:py-20"
         >
           <div className="spotlight-card-glow" />
           <div className="pointer-events-none absolute left-1/2 top-0 h-full w-full -translate-x-1/2">
