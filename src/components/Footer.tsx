@@ -21,7 +21,7 @@ export function Footer() {
             M
           </span>
           <span className="font-display text-sm font-semibold text-[var(--text-secondary)]">
-            메이플 월드 커뮤니티
+            메이플 월드 통합 디스코드
           </span>
         </div>
         <div className="flex flex-col items-center gap-2 sm:items-end">

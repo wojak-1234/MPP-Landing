@@ -42,7 +42,7 @@ export function Navbar() {
               className="h-9 w-auto"
             />
             <span className="font-display text-sm font-bold tracking-tight text-[var(--text-primary)]">
-              메이플 플래닛
+              메이플 월드 통합 디스코드
             </span>
           </a>
 
