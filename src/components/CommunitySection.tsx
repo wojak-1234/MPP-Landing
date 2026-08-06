@@ -19,9 +19,9 @@ const communities: Community[] = [
   {
     id: "planet",
     emoji: "🍁",
-    name: "메이플 플래닛 디스코드",
+    name: "메이플 월드 통합 디스코드",
     tagline: "정통 메이플 월드를 위한 공간",
-    desc: "보스, 사냥, 거래까지 — 메이플 플래닛 유저들을 위한 가장 활발한 거래·정보 채널을 만나보세요.",
+    desc: "보스, 사냥, 거래까지 — 다양한 메이플 플랫폼 유저들을 위한 가장 활발한 거래·정보 채널을 만나보세요.",
     href: "https://discord.com/invite/mpplanet",
     gradient: "linear-gradient(135deg, rgba(255,122,41,0.22), rgba(255,201,77,0.08))",
   },
