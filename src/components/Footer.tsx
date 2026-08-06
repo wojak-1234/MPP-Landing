@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Footer() {
   return (
     <footer className="relative border-t border-white/[0.06] px-6 py-10">
@@ -13,9 +15,17 @@ export function Footer() {
             메이플 월드 커뮤니티
           </span>
         </div>
-        <p className="text-xs text-[var(--text-muted)]">
-          본 커뮤니티는 Nexon Korea와 무관한 비공식 팬 커뮤니티입니다.
-        </p>
+        <div className="flex flex-col items-center gap-2 sm:items-end">
+          <Link
+            href="/privacy"
+            className="text-xs text-[var(--text-muted)] underline decoration-white/10 underline-offset-2 transition-colors hover:text-[var(--text-secondary)] hover:decoration-white/30"
+          >
+            개인정보 처리방침
+          </Link>
+          <p className="text-xs text-[var(--text-muted)]">
+            본 커뮤니티는 Nexon Korea와 무관한 비공식 팬 커뮤니티입니다.
+          </p>
+        </div>
       </div>
     </footer>
   );
