@@ -35,9 +35,9 @@ export function DiscordButton({
         onClick={onClick}
         whileHover={{ y: -2 }}
         whileTap={{ scale: 0.97 }}
-        className={`group inline-flex items-center gap-2.5 rounded-2xl glass ${sizeCls} font-semibold text-[var(--text-primary)] transition-colors hover:border-[var(--accent-violet-soft)]/50 ${className}`}
+        className={`group inline-flex items-center gap-2.5 rounded-2xl glass ${sizeCls} font-semibold text-[var(--text-primary)] transition-colors hover:border-[var(--accent-maple-soft)]/50 ${className}`}
       >
-        <DiscordMark className="h-5 w-5 text-[var(--accent-violet-soft)]" />
+        <DiscordMark className="h-5 w-5 text-[var(--accent-maple-soft)]" />
         {label}
         <ArrowUpRight className="h-4 w-4 opacity-60 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
       </motion.a>
@@ -52,18 +52,18 @@ export function DiscordButton({
         onClick={onClick}
         whileHover={{ y: -1 }}
         whileTap={{ scale: 0.96 }}
-        className="group relative z-10 inline-flex items-center gap-2.5 overflow-hidden rounded-2xl font-bold text-white bg-[#0e1017] shadow-[0_20px_45px_-15px_rgba(124,111,240,0.3)] transition-shadow hover:shadow-[0_25px_55px_-12px_rgba(124,111,240,0.5)]"
+        className="group relative z-10 inline-flex items-center gap-2.5 overflow-hidden rounded-2xl font-bold text-white bg-[#170f09] shadow-[0_20px_45px_-15px_rgba(255,122,41,0.35)] transition-shadow hover:shadow-[0_25px_55px_-12px_rgba(255,122,41,0.55)]"
         style={{
-          background: "linear-gradient(135deg, rgba(22, 25, 40, 0.95) 0%, rgba(14, 16, 27, 0.95) 100%)",
+          background: "linear-gradient(135deg, rgba(31, 20, 12, 0.95) 0%, rgba(18, 11, 6, 0.95) 100%)",
         }}
       >
         <div className={sizeCls + " flex items-center gap-2.5"}>
           <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
-          <DiscordMark className="h-5 w-5 text-[var(--accent-violet-soft)] transition-colors group-hover:text-white" />
-          <span className="relative bg-gradient-to-r from-white to-[#d4d1f5] bg-clip-text text-transparent group-hover:from-white group-hover:to-white">
+          <DiscordMark className="h-5 w-5 text-[var(--accent-maple-soft)] transition-colors group-hover:text-white" />
+          <span className="relative bg-gradient-to-r from-white to-[#ffe3b8] bg-clip-text text-transparent group-hover:from-white group-hover:to-white">
             {label}
           </span>
-          <ArrowUpRight className="relative h-4 w-4 text-[var(--accent-violet-soft)] transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white" />
+          <ArrowUpRight className="relative h-4 w-4 text-[var(--accent-maple-soft)] transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white" />
         </div>
       </motion.a>
     </div>

@@ -203,9 +203,9 @@ export function ShaderGradient(props: ShaderGradientProps) {
 
     // Default parameters configuration matching the user props specification
     const config = {
-      color1: active.color1 || "#7c6ff0",
-      color2: active.color2 || "#4d9fff",
-      color3: active.color3 || "#ff7a5c",
+      color1: active.color1 || "#ff7a29",
+      color2: active.color2 || "#ffc94d",
+      color3: active.color3 || "#ff4d3e",
       uSpeed: active.uSpeed ?? 0.3,
       uDensity: active.uDensity ?? 1.5,
       uStrength: active.uStrength ?? 1.5,

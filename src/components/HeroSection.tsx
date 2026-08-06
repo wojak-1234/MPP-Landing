@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { Users, ShieldCheck, MessageSquareHeart, PartyPopper } from "lucide-react";
 import { animate, stagger } from "animejs";
@@ -114,8 +115,8 @@ export function HeroSection() {
       suffix: "+",
       label: "멤버",
       numeric: true,
-      iconBgClass: "bg-[var(--accent-violet)]/20",
-      iconColorClass: "text-[var(--accent-violet-soft)]"
+      iconBgClass: "bg-[var(--accent-maple)]/20",
+      iconColorClass: "text-[var(--accent-maple-soft)]"
     },
     {
       depth: 18,
@@ -126,8 +127,8 @@ export function HeroSection() {
       suffix: "%",
       label: "신뢰 제휴인",
       numeric: true,
-      iconBgClass: "bg-[var(--accent-blue)]/20",
-      iconColorClass: "text-[var(--accent-blue)]"
+      iconBgClass: "bg-[var(--accent-gold)]/20",
+      iconColorClass: "text-[var(--accent-gold)]"
     },
     {
       depth: 22,
@@ -138,8 +139,8 @@ export function HeroSection() {
       suffix: "/7",
       label: "상시 소통",
       numeric: true,
-      iconBgClass: "bg-[var(--accent-violet)]/20",
-      iconColorClass: "text-[var(--accent-violet-soft)]"
+      iconBgClass: "bg-[var(--accent-maple)]/20",
+      iconColorClass: "text-[var(--accent-maple-soft)]"
     },
     {
       depth: 14,
@@ -223,6 +224,26 @@ export function HeroSection() {
       className="relative flex min-h-[100vh] w-full items-center justify-center overflow-hidden pt-28 pb-20"
     >
       <HeroBackdrop />
+
+      {/* ambient drifting maple leaves */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <Image
+          src="/images/maple-leaf.png"
+          alt=""
+          width={90}
+          height={90}
+          className="leaf-drift absolute left-[10%] top-[22%] opacity-20"
+          style={{ "--leaf-rot": "-15deg", animationDelay: "0s" } as React.CSSProperties}
+        />
+        <Image
+          src="/images/maple-leaf.png"
+          alt=""
+          width={70}
+          height={70}
+          className="leaf-drift absolute right-[14%] bottom-[24%] opacity-15"
+          style={{ "--leaf-rot": "20deg", animationDelay: "2.4s" } as React.CSSProperties}
+        />
+      </div>
 
       {/* floating glass instrument cards — spatial UI signature */}
       <div className="pointer-events-none absolute inset-0 hidden md:block overflow-hidden perspective-1000 preserve-3d">

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Coins,
@@ -65,7 +66,7 @@ function MarketMockup() {
     <div className="flex h-full flex-col justify-between p-6">
       <div>
         <div className="flex items-center justify-between mb-4">
-          <span className="text-xs font-semibold uppercase tracking-wider text-[var(--accent-blue)]">메소 거래 신뢰 지표</span>
+          <span className="text-xs font-semibold uppercase tracking-wider text-[var(--accent-gold)]">메소 거래 신뢰 지표</span>
           <span className="inline-flex items-center gap-1 text-[10px] rounded-md bg-emerald-500/10 px-2 py-0.5 text-emerald-400 font-medium">
             <ShieldCheck className="h-3 w-3" /> 실시간 보증
           </span>
@@ -185,15 +186,15 @@ function PartyMockup() {
     <div className="flex h-full flex-col justify-between p-6">
       <div>
         <div className="flex items-center justify-between mb-4">
-          <span className="text-xs font-semibold uppercase tracking-wider text-[var(--accent-violet-soft)]">파티 매칭</span>
-          <span className="inline-flex items-center gap-1 rounded-md bg-[var(--accent-violet)]/10 px-2 py-0.5 text-[10px] font-medium text-[var(--accent-violet-soft)]">
+          <span className="text-xs font-semibold uppercase tracking-wider text-[var(--accent-maple-soft)]">파티 매칭</span>
+          <span className="inline-flex items-center gap-1 rounded-md bg-[var(--accent-maple)]/10 px-2 py-0.5 text-[10px] font-medium text-[var(--accent-maple-soft)]">
             <Users className="h-3 w-3" /> {slotCount} / 4 구인중
           </span>
         </div>
 
         <div className="rounded-xl bg-white/[0.03] border border-white/[0.05] p-4">
           <div className="flex items-center gap-3 mb-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[var(--accent-violet)]/15 text-[var(--accent-violet-soft)]">
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[var(--accent-maple)]/15 text-[var(--accent-maple-soft)]">
               <Flame className="h-5 w-5" />
             </div>
             <div>
@@ -207,7 +208,7 @@ function PartyMockup() {
               <div
                 key={i}
                 className={`h-7 w-7 rounded-lg flex items-center justify-center border text-[10px] font-bold transition-all duration-300 ${i < slotCount
-                  ? "bg-[var(--accent-violet)]/20 border-[var(--accent-violet-soft)] text-[var(--accent-violet-soft)]"
+                  ? "bg-[var(--accent-maple)]/20 border-[var(--accent-maple-soft)] text-[var(--accent-maple-soft)]"
                   : "bg-white/5 border-white/10 text-[var(--text-muted)]"
                   }`}
               >
@@ -223,7 +224,7 @@ function PartyMockup() {
           onClick={handleJoin}
           className={`w-full rounded-xl py-3 text-xs font-bold transition-all active:scale-98 cursor-pointer ${joined
             ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500/30"
-            : "bg-[var(--accent-violet)] text-white hover:bg-[var(--accent-violet-soft)] hover:shadow-[0_0_20px_rgba(124,111,240,0.4)]"
+            : "bg-[var(--accent-maple)] text-white hover:bg-[var(--accent-maple-soft)] hover:shadow-[0_0_20px_rgba(255,122,41,0.4)]"
             }`}
         >
           {joined ? "지원 취소하기" : "파티 즉시 지원"}
@@ -260,7 +261,7 @@ function ChatMockup() {
     <div className="flex h-full flex-col justify-between p-6">
       <div>
         <div className="flex items-center justify-between mb-4">
-          <span className="text-xs font-semibold uppercase tracking-wider text-[var(--accent-blue)]">소통 채널</span>
+          <span className="text-xs font-semibold uppercase tracking-wider text-[var(--accent-gold)]">소통 채널</span>
           <span className="flex items-center gap-1 text-[10px] text-emerald-400 font-medium">
             <span className="relative flex h-1.5 w-1.5">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
@@ -304,7 +305,8 @@ export function FeatureSection() {
           transition={{ duration: 0.6 }}
           className="mb-14 max-w-2xl"
         >
-          <p className="mb-3 text-sm font-semibold text-[var(--accent-violet-soft)]">
+          <p className="mb-3 flex items-center gap-1.5 text-sm font-semibold text-[var(--accent-maple-soft)]">
+            <Image src="/images/maple-leaf.png" alt="" width={14} height={14} className="opacity-90" />
             Features
           </p>
           <h2 className="font-display text-3xl font-extrabold tracking-tight text-[var(--text-primary)] sm:text-4xl">
@@ -321,6 +323,16 @@ export function FeatureSection() {
           <ShaderGradientCanvas style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}>
             <ShaderGradient />
           </ShaderGradientCanvas>
+
+          {/* Subtle maple leaf watermark */}
+          <Image
+            src="/images/maple-leaf.png"
+            alt=""
+            width={180}
+            height={180}
+            className="pointer-events-none absolute -right-8 -top-8 opacity-[0.06]"
+            style={{ transform: "rotate(18deg)" }}
+          />
 
           <div className="relative z-10 grid grid-cols-1 gap-10 lg:grid-cols-12">
 
@@ -343,7 +355,7 @@ export function FeatureSection() {
                       />
                     )}
 
-                    <div className={`relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:border-white/20 transition-all ${isActive ? "bg-[var(--accent-violet)]/15 border-[var(--accent-violet-soft)]/30 text-[var(--accent-violet-soft)]" : "text-[var(--text-secondary)]"
+                    <div className={`relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:border-white/20 transition-all ${isActive ? "bg-[var(--accent-maple)]/15 border-[var(--accent-maple-soft)]/30 text-[var(--accent-maple-soft)]" : "text-[var(--text-secondary)]"
                       }`}>
                       <Icon className="h-5 w-5" />
                     </div>
@@ -382,7 +394,7 @@ export function FeatureSection() {
 
                     <a
                       href="https://discord.com/invite/mpplanet"
-                      className="inline-flex items-center gap-1.5 text-xs font-bold text-[var(--accent-violet-soft)] hover:text-white transition-colors"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-[var(--accent-maple-soft)] hover:text-white transition-colors"
                     >
                       실시간 소통방 참여하기 <ArrowRight className="h-3.5 w-3.5" />
                     </a>

@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * Hero section background: a looping video (public/videos/backdrop.mp4)
+ * Hero section background: a looping video (public/videos/maple-backdrop.mp4)
  * with a dark readability overlay so the badge/title/buttons stay legible
  * on top of it.
  */
@@ -10,7 +10,7 @@ export function HeroBackdrop() {
     <div className="absolute inset-0 overflow-hidden">
       <video
         className="absolute inset-0 h-full w-full object-cover"
-        src="/videos/backdrop.mp4"
+        src="/videos/maple-backdrop.mp4"
         autoPlay
         loop
         muted

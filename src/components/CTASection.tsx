@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { DiscordButton } from "./DiscordButton";
 
@@ -44,13 +45,22 @@ export function CTASection() {
         >
           <div className="spotlight-card-glow" />
           <div className="pointer-events-none absolute left-1/2 top-0 h-full w-full -translate-x-1/2">
-            <div className="absolute left-1/2 top-[-30%] h-[70%] w-[70%] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(124,111,240,0.3),transparent_70%)] blur-2xl" />
-            <div className="absolute right-[-10%] bottom-[-30%] h-[60%] w-[60%] rounded-full bg-[radial-gradient(circle,rgba(77,159,255,0.22),transparent_70%)] blur-2xl" />
+            <div className="absolute left-1/2 top-[-30%] h-[70%] w-[70%] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,122,41,0.3),transparent_70%)] blur-2xl" />
+            <div className="absolute right-[-10%] bottom-[-30%] h-[60%] w-[60%] rounded-full bg-[radial-gradient(circle,rgba(255,201,77,0.22),transparent_70%)] blur-2xl" />
           </div>
 
+          <Image
+            src="/images/maple-leaf.png"
+            alt=""
+            width={160}
+            height={160}
+            className="pointer-events-none absolute -left-8 -bottom-8 opacity-[0.06]"
+            style={{ transform: "rotate(-20deg)" }}
+          />
 
           <div className="relative">
-            <p className="mb-4 text-sm font-semibold text-[var(--accent-violet-soft)]">
+            <p className="mb-4 flex items-center justify-center gap-1.5 text-sm font-semibold text-[var(--accent-maple-soft)]">
+              <Image src="/images/maple-leaf.png" alt="" width={14} height={14} className="opacity-90" />
               Join Us
             </p>
             <h2 className="font-display mx-auto max-w-2xl text-balance text-3xl font-extrabold leading-tight tracking-tight text-[var(--text-primary)] sm:text-4xl md:text-5xl">

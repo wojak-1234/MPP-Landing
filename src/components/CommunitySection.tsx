@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { DiscordButton } from "./DiscordButton";
 import { ShaderGradientCanvas, ShaderGradient } from "./ShaderGradient";
@@ -22,7 +23,7 @@ const communities: Community[] = [
     tagline: "정통 메이플 월드를 위한 공간",
     desc: "보스, 사냥, 거래까지 — 메이플 플래닛 유저들을 위한 가장 활발한 거래·정보 채널을 만나보세요.",
     href: "https://discord.com/invite/mpplanet",
-    gradient: "linear-gradient(135deg, rgba(124,111,240,0.22), rgba(77,159,255,0.08))",
+    gradient: "linear-gradient(135deg, rgba(255,122,41,0.22), rgba(255,201,77,0.08))",
   },
   {
     id: "land",
@@ -31,7 +32,7 @@ const communities: Community[] = [
     tagline: "메이플 랜드 유저들의 모임터",
     desc: "메이플 랜드만의 시세, 닉네임, 길드 정보를 실시간으로 공유하는 전용 커뮤니티입니다.",
     href: "https://discord.gg/wa7AaupNR",
-    gradient: "linear-gradient(135deg, rgba(255,122,92,0.18), rgba(124,111,240,0.08))",
+    gradient: "linear-gradient(135deg, rgba(255,77,62,0.2), rgba(255,201,77,0.08))",
   },
 ];
 
@@ -69,9 +70,17 @@ function CommunityCard({ c, index }: { c: Community; index: number }) {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-      className="neo-raised spotlight-card group relative overflow-hidden rounded-3xl p-9 transition-shadow duration-300 hover:shadow-[0_50px_90px_-30px_rgba(124,111,240,0.35)] sm:p-10"
+      className="neo-raised spotlight-card group relative overflow-hidden rounded-3xl p-9 transition-shadow duration-300 hover:shadow-[0_50px_90px_-30px_rgba(255,122,41,0.35)] sm:p-10"
     >
       <div className="spotlight-card-glow" />
+      <Image
+        src="/images/maple-leaf.png"
+        alt=""
+        width={150}
+        height={150}
+        className="pointer-events-none absolute -bottom-6 -right-6 opacity-[0.07]"
+        style={{ transform: "rotate(-12deg)" }}
+      />
       <div className="pointer-events-none absolute inset-0 opacity-15 overflow-hidden rounded-3xl -z-10">
         <ShaderGradientCanvas style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}>
           <ShaderGradient
@@ -82,9 +91,9 @@ function CommunityCard({ c, index }: { c: Community; index: number }) {
             cDistance={2.8}
             cPolarAngle={80}
             cameraZoom={9.1}
-            color1={c.id === "planet" ? "#606080" : "#8a4b3d"}
-            color2="#8d7dca"
-            color3="#212121"
+            color1={c.id === "planet" ? "#5c4530" : "#7a3d2e"}
+            color2="#c9903d"
+            color3="#241a12"
             destination="onCanvas"
             embedMode="off"
             envPreset="city"
@@ -159,7 +168,10 @@ export function CommunitySection() {
           transition={{ duration: 0.6 }}
           className="mb-14 max-w-2xl"
         >
-          <p className="mb-3 text-sm font-semibold text-[var(--accent-blue)]">Community</p>
+          <p className="mb-3 flex items-center gap-1.5 text-sm font-semibold text-[var(--accent-gold)]">
+            <Image src="/images/maple-leaf.png" alt="" width={14} height={14} className="opacity-90" />
+            Community
+          </p>
           <h2 className="font-display text-3xl font-extrabold tracking-tight text-[var(--text-primary)] sm:text-4xl">
             두 개의 메이플 월드,
             <br />

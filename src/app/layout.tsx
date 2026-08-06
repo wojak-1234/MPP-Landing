@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className={`h-full antialiased ${scdream.variable}`}>
-      <body className="min-h-full flex flex-col bg-[#08090F] text-[#E7E8F2]">
+      <body className="min-h-full flex flex-col bg-[#0C0806] text-[#F6EFE4]">
         {children}
       </body>
     </html>

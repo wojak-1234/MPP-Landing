@@ -1,13 +1,22 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-white/[0.06] px-6 py-10">
+    <footer className="relative overflow-hidden border-t border-white/[0.06] px-6 py-10">
+      <Image
+        src="/images/maple-leaf.png"
+        alt=""
+        width={130}
+        height={130}
+        className="pointer-events-none absolute -right-4 -top-10 opacity-[0.05]"
+        style={{ transform: "rotate(10deg)" }}
+      />
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
         <div className="flex items-center gap-2.5">
           <span
             className="flex h-7 w-7 items-center justify-center rounded-lg text-xs font-extrabold text-white"
-            style={{ background: "linear-gradient(135deg, #8b7dfb 0%, #4d9fff 100%)" }}
+            style={{ background: "linear-gradient(135deg, #ff7a29 0%, #ffc94d 100%)" }}
           >
             M
           </span>

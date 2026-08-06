@@ -1,33 +1,33 @@
 @import "tailwindcss";
 
 :root {
-  /* base canvas */
-  --bg-void: #08090f;
-  --bg-deep: #0b0d16;
-  --bg-surface: #11131e;
-  --bg-surface-2: #161928;
+  /* base canvas — warm maple-night charcoal instead of cool blue-black */
+  --bg-void: #0c0806;
+  --bg-deep: #150e09;
+  --bg-surface: #1f150d;
+  --bg-surface-2: #2a1c11;
 
-  /* accent system — maple blue/purple, ember accent for the "maple" hint */
-  --accent-violet: #7c6ff0;
-  --accent-violet-soft: #9a8fff;
-  --accent-blue: #4d9fff;
-  --accent-ember: #ff7a5c;
+  /* accent system — autumn maple leaf: ember red → maple orange → gold */
+  --accent-maple: #ff7a29;
+  --accent-maple-soft: #ffab5c;
+  --accent-gold: #ffc94d;
+  --accent-ember: #ff4d3e;
 
   /* text */
-  --text-primary: #f1f2fb;
-  --text-secondary: #aeb2cc;
-  --text-muted: #6c7092;
+  --text-primary: #f6efe4;
+  --text-secondary: #c9beae;
+  --text-muted: #8a7d6c;
 
   /* glass + neo */
-  --glass-fill: rgba(22, 25, 40, 0.55);
-  --glass-fill-strong: rgba(26, 29, 46, 0.72);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-border-strong: rgba(255, 255, 255, 0.14);
+  --glass-fill: rgba(31, 21, 13, 0.55);
+  --glass-fill-strong: rgba(36, 25, 15, 0.72);
+  --glass-border: rgba(255, 236, 214, 0.08);
+  --glass-border-strong: rgba(255, 236, 214, 0.14);
 
   --shadow-ambient: 0 1px 0 rgba(255, 255, 255, 0.04) inset,
     0 30px 60px -25px rgba(0, 0, 0, 0.65), 0 8px 20px -8px rgba(0, 0, 0, 0.5);
   --shadow-raised: 0 1px 0 rgba(255, 255, 255, 0.06) inset,
-    0 40px 80px -30px rgba(0, 0, 0, 0.7), 0 10px 30px -10px rgba(76, 67, 160, 0.25);
+    0 40px 80px -30px rgba(0, 0, 0, 0.7), 0 10px 30px -10px rgba(160, 82, 30, 0.28);
   --shadow-inset: inset 0 1px 1px rgba(255, 255, 255, 0.06),
     inset 0 -8px 20px rgba(0, 0, 0, 0.35);
 
@@ -62,7 +62,7 @@ body {
 }
 
 ::selection {
-  background: var(--accent-violet);
+  background: var(--accent-maple);
   color: #fff;
 }
 
@@ -103,14 +103,14 @@ body {
 }
 
 .text-gradient-primary {
-  background: linear-gradient(120deg, #f1f2fb 0%, #c9c4ff 45%, #8fb6ff 100%);
+  background: linear-gradient(120deg, #f6efe4 0%, #ffd88a 45%, #ff9a52 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 .text-gradient-accent {
-  background: linear-gradient(120deg, var(--accent-violet-soft), var(--accent-blue));
+  background: linear-gradient(120deg, var(--accent-maple-soft), var(--accent-gold));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -183,7 +183,7 @@ body {
   border-radius: inherit;
   background: radial-gradient(
     400px circle at var(--mouse-x, 0px) var(--mouse-y, 0px),
-    rgba(124, 111, 240, 0.08),
+    rgba(255, 122, 41, 0.1),
     transparent 50%
   );
   pointer-events: none;
@@ -211,8 +211,8 @@ body {
   background: conic-gradient(
     from 0deg,
     transparent 30%,
-    var(--accent-violet-soft) 50%,
-    var(--accent-blue) 70%,
+    var(--accent-maple-soft) 50%,
+    var(--accent-gold) 70%,
     transparent 90%
   );
   animation: rotate-shimmer 4s linear infinite;
@@ -232,5 +232,20 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Ambient maple leaf drift — used for decorative watermark leaves */
+@keyframes leaf-drift {
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--leaf-rot, 0deg));
+  }
+  50% {
+    transform: translateY(-16px) rotate(calc(var(--leaf-rot, 0deg) + 5deg));
+  }
+}
+
+.leaf-drift {
+  animation: leaf-drift 7s ease-in-out infinite;
 }
 

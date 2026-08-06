@@ -81,7 +81,7 @@ export default function PrivacyPolicyPage() {
           </Link>
 
           <div className="mb-4">
-            <span className="text-xs font-semibold uppercase tracking-wider text-[var(--accent-violet-soft)]">
+            <span className="text-xs font-semibold uppercase tracking-wider text-[var(--accent-maple-soft)]">
               Privacy Policy
             </span>
           </div>
@@ -181,7 +181,7 @@ export default function PrivacyPolicyPage() {
               <p>이용자는 언제든지 본인의 데이터에 대해 삭제를 요청할 수 있습니다.</p>
               <div className="grid gap-3 sm:grid-cols-2">
                 <div className="neo-card rounded-xl p-4">
-                  <p className="mb-1.5 text-xs font-semibold uppercase tracking-wider text-[var(--accent-violet-soft)]">
+                  <p className="mb-1.5 text-xs font-semibold uppercase tracking-wider text-[var(--accent-maple-soft)]">
                     1차 경로 — 봇 명령어
                   </p>
                   <p>
@@ -194,7 +194,7 @@ export default function PrivacyPolicyPage() {
                   </p>
                 </div>
                 <div className="neo-card rounded-xl p-4">
-                  <p className="mb-1.5 text-xs font-semibold uppercase tracking-wider text-[var(--accent-blue)]">
+                  <p className="mb-1.5 text-xs font-semibold uppercase tracking-wider text-[var(--accent-gold)]">
                     2차 경로(백업) — 이메일
                   </p>
                   <p>
